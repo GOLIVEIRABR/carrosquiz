@@ -5,6 +5,7 @@ import QuizLogo from '../src/components/QuizLogo'
 import QuizBackground from '../src/components/QuizBackground'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
+import Head from 'next/head'
 
 // const BackgroundImage = styled.div`
 //   background-image: url(${db.bg});
@@ -26,6 +27,16 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
+    <>
+    <Head>
+      <title>Quiz sobre Carros</title>
+      <meta property="og:type" content="website" key="type"/>
+      <meta property="og:url" content="https://metatags.io/" key="url"/>
+      <meta property="og:title" content="Meta Tags — Preview, Edit and Generate" key="title"/>
+      <meta property="og:description" content="Responda a este Quiz sobre carros e prove seus conhecimentos!" />
+      <meta property="og:image" content={db.bg} />
+    </Head>
+
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
         <QuizLogo />
@@ -49,5 +60,6 @@ export default function Home() {
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/omariosouto" />
     </QuizBackground>
+    </>
   );
 }
