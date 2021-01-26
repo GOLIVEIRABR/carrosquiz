@@ -34,7 +34,7 @@ export default function Home() {
       <meta property="og:url" content="https://metatags.io/" key="url"/>
       <meta property="og:title" content="Quiz sobre carros" key="title"/>
       <meta property="og:description" content="Responda a este Quiz sobre carros e prove seus conhecimentos!!!" key="description"/>
-      <meta property="og:image" content={db.bg} />
+      <meta property="og:image" content={db.bg} key="image"/>
     </Head>
 
     <QuizBackground backgroundImage={db.bg}>
